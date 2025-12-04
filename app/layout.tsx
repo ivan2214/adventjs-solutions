@@ -31,14 +31,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://adventjs-ivan2214.vercel.app",
+    url: "https://adventjs-solutions.vercel.app",
     siteName: "AdventJS Soluciones - ivan2214",
     title: "Mis Soluciones AdventJS 2024 | ivan2214",
     description:
       "Colección de mis soluciones a los 25 retos de programación de AdventJS 2024. Retos navideños resueltos con JavaScript y TypeScript.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "AdventJS Soluciones por ivan2214",
@@ -50,13 +50,12 @@ export const metadata: Metadata = {
     title: "Mis Soluciones AdventJS 2024 | ivan2214",
     description:
       "Colección de mis soluciones a los 25 retos de programación de AdventJS 2024.",
-    images: ["/og-image.png"],
+    images: ["/og-image.webp"],
   },
   robots: {
     index: true,
     follow: true,
   },
-  generator: "v0.app",
 };
 
 export const viewport = {
