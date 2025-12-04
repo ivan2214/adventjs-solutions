@@ -28,7 +28,7 @@ jobs:
         run: pnpm install
 
       - name: Run update script
-        run: npx tsx scripts/update-challenges.ts
+        run: pnpm dlx tsx scripts/update-challenges.ts
 
       - name: Commit and push if changed
         run: |
