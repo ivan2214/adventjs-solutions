@@ -1,0 +1,47 @@
+[
+  {
+    "day": 1,
+    "title": "Reto #1: 🎁 Filtrar los regalos defectuosos",
+    "emoji": "🎁",
+    "difficulty": "Fácil",
+    "descriptions": [
+      "Santa ha recibido una lista de regalos, pero algunos están defectuosos. Un regalo es defectuoso si su nombre contiene el carácter #.",
+      "Ayuda a Santa escribiendo una función que reciba una lista de nombres de regalos y devuelva una nueva lista que solo contenga los regalos sin defectos."
+    ],
+    "solved": false,
+    "image": "https://adventjs.dev/es/backgrounds/1.webp"
+  },
+  {
+    "day": 2,
+    "title": "Reto #2: 🏭 Fabrica los juguetes",
+    "emoji": "🎁",
+    "difficulty": "Fácil",
+    "descriptions": [
+      "La fábrica de Santa ha empezado a recibir la lista de producción de juguetes.\nCada línea indica qué juguete hay que fabricar y cuántas unidades.",
+      "Los elfos, como siempre, han metido la pata: han apuntado algunos juguetes con cantidades que no tienen sentido.",
+      "Tienes una lista de objetos con esta forma:",
+      "toy: el nombre del juguete (string)\nquantity: cuántas unidades hay que fabricar (number)",
+      "Tu tarea es escribir una función que reciba esta lista y devuelva un array de strings con:",
+      "Cada juguete repetido tantas veces como indique quantity\nEn el mismo orden en el que aparecen en la lista original\nIgnorando los juguetes con cantidades no válidas (menores o iguales a 0, o que no sean número)"
+    ],
+    "solved": false,
+    "image": "https://adventjs.dev/es/backgrounds/2.webp"
+  },
+  {
+    "day": 3,
+    "title": "Reto #3: 👶 Ayuda al becario",
+    "emoji": "🎁",
+    "difficulty": "Fácil",
+    "descriptions": [
+      "En el taller de Santa hay un elfo becario que está aprendiendo a envolver regalos 🎁.",
+      "Le han pedido que envuelva cajas usando solo texto… y lo hace más o menos bien.",
+      "Le pasan dos parámetros:",
+      "size: el tamaño del regalo cuadrado\nsymbol: el carácter que el elfo usa para hacer el borde (cuando no se equivoca 😅)",
+      "El regalo debe cumplir:",
+      "Debe ser un cuadrado de size x size.\nEl interior siempre está vacío (lleno de espacios), porque el elfo \"aún no sabe dibujar el relleno\".\nSi size < 2, devuelve una cadena vacía: el elfo lo intentó, pero se le perdió el regalo.\nEl resultado final debe ser un string con saltos de línea \\n.",
+      "Sí, es un reto fácil… pero no queremos que despidan al becario. ¿Verdad?"
+    ],
+    "solved": false,
+    "image": "https://adventjs.dev/es/backgrounds/3.webp"
+  }
+]

@@ -47,6 +47,13 @@ export function ChallengeCard({ challenge }: ChallengeCardProps) {
           }
         `}
         >
+          <picture className="absolute inset-0 bg-center bg-cover">
+            <img
+              alt="Challenge 1 Background"
+              className="absolute inset-0 h-full w-full object-cover"
+              src={challenge.image}
+            />
+          </picture>
           {/* Day number */}
           <span className="absolute top-2 left-3 font-bold text-3xl text-foreground/80 md:text-4xl">
             {challenge.day}
@@ -112,10 +119,12 @@ export function ChallengeCard({ challenge }: ChallengeCardProps) {
 
         {/* Content */}
         <div>
-          {challenge.description && (
-            <p className="mb-6 text-lg text-muted-foreground">
-              {challenge.description}
-            </p>
+          {challenge.descriptions.length > 0 && (
+            <div className="hidden text-pretty font-mono text-[#2b0e16] text-base [&>h2]:font-bold [&>ul>li]:list-inside [&>ul>li]:list-disc [&>ul>li]:text-[#2b0e16] [&>ul]:mb-4 [&_code]:font-mono [&_code]:text-sm [&_pre]:my-4 [&_pre]:overflow-x-auto">
+              {challenge.descriptions.map((description, index) => (
+                <p key={index}>{description}</p>
+              ))}
+            </div>
           )}
 
           {challenge.solution && (
