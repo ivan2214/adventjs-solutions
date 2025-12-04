@@ -26,7 +26,7 @@ export function Header() {
               <span className="hidden sm:inline">ivan2214</span>
             </Link>
             <Link
-              href="https://twitter.com/ivan2214"
+              href="https://x.com/bongiovanniDev"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-accent"
