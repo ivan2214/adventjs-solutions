@@ -2,7 +2,7 @@ name: Update Challenges
 
 on:
   schedule:
-    - cron: "0 17 * * *" # 14:00 Argentina (UTC-3) -> 17:00 UTC
+    - cron: "0 17 1-24 12 *" # 18:00 España (CET, UTC+1) del 1 al 24 de diciembre
   workflow_dispatch:
 
 jobs:
