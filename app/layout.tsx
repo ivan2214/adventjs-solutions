@@ -56,6 +56,20 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    other: {
+      rel: "shortcut icon",
+      url: "/favicon.ico",
+    },
+  },
+  metadataBase: new URL("https://adventjs-solutions.vercel.app"),
+  applicationName: "AdventJS Soluciones - ivan2214",
+  verification: {
+    google: "dvE7hnr1ohmo0zCs_nEGTDOdrDY0NfSR3FcNxiNtd8E",
+  },
 };
 
 export const viewport = {
