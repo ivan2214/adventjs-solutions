@@ -3,7 +3,6 @@ import challengesData from "./challenges.json";
 export interface Challenge {
   day: number;
   title: string;
-  emoji: string;
   difficulty: "Fácil" | "Medio" | "Difícil";
   solved: boolean;
   solution?: string;

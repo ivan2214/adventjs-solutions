@@ -69,9 +69,7 @@ export function ChallengeCard({ challenge }: ChallengeCardProps) {
           {/* Center content */}
           <div className="absolute inset-0 flex items-center justify-center">
             {challenge.solved ? (
-              <span className="text-4xl transition-transform group-hover:scale-110 md:text-5xl">
-                {challenge.emoji}
-              </span>
+              <Check className="h-8 w-8 text-success" />
             ) : (
               <Lock className="h-8 w-8 text-muted-foreground" />
             )}
@@ -98,10 +96,12 @@ export function ChallengeCard({ challenge }: ChallengeCardProps) {
       </DialogTrigger>
       <DialogContent className="max-h-[85vh] w-full overflow-hidden overflow-y-auto rounded-xl border-2 border-border bg-card shadow-2xl">
         {/* Header */}
-        <DialogHeader className="flex items-start justify-between border-border border-b p-6">
-          <div>
-            <div className="mb-2 flex items-center gap-3">
-              <span className="text-4xl">{challenge.emoji}</span>
+        <DialogHeader className="flex items-start justify-between border-border border-b pb-2">
+          <div className="flex flex-col items-start gap-3">
+            <h2 className="font-bold text-2xl md:text-3xl">
+              {challenge.title}
+            </h2>
+            <div className="flex items-center gap-3">
               <span className="rounded bg-secondary px-3 py-1 text-sm">
                 Día {challenge.day}
               </span>
@@ -111,16 +111,14 @@ export function ChallengeCard({ challenge }: ChallengeCardProps) {
                 {challenge.difficulty}
               </span>
             </div>
-            <h2 className="font-bold text-2xl md:text-3xl">
-              {challenge.title}
-            </h2>
           </div>
         </DialogHeader>
 
         {/* Content */}
         <div>
+          <h3 className="font-bold text-accent text-xl">Descripción</h3>
           {challenge.descriptions.length > 0 && (
-            <div className="hidden text-pretty font-mono text-[#2b0e16] text-base [&>h2]:font-bold [&>ul>li]:list-inside [&>ul>li]:list-disc [&>ul>li]:text-[#2b0e16] [&>ul]:mb-4 [&_code]:font-mono [&_code]:text-sm [&_pre]:my-4 [&_pre]:overflow-x-auto">
+            <div className="prose prose-p:text-pretty prose-p:text-muted-foreground text-base">
               {challenge.descriptions.map((description, index) => (
                 <p key={index}>{description}</p>
               ))}
@@ -158,7 +156,7 @@ export function ChallengeCard({ challenge }: ChallengeCardProps) {
         {/* Footer */}
         <DialogFooter className="border-border border-t bg-secondary/30 p-4">
           <a
-            href={`https://adventjs.dev/es/challenges/2024/${challenge.day}`}
+            href={`https://adventjs.dev/es/challenges/2025/${challenge.day}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2 text-primary-foreground transition-colors hover:bg-primary/80"

@@ -8,7 +8,6 @@ const BASE_URL = "https://adventjs.dev/es";
 interface Challenge {
   day: number;
   title: string;
-  emoji: string;
   difficulty: "Fácil" | "Medio" | "Difícil";
   solved: boolean;
   solution?: string;
@@ -50,14 +49,7 @@ async function fetchChallengeDetails(day: number) {
       if (header.length) titleText = header.text().trim();
     }
 
-    const titleMatch = titleText.match(/Reto #\d+:\s+(.)\s+(.*)/);
-    let emoji = "🎁";
-    let title = titleText;
-
-    if (titleMatch) {
-      emoji = titleMatch[1];
-      title = titleMatch[2];
-    }
+    const title = titleText;
 
     const descriptions: string[] = [];
     const descriptionDiv = $('div[id*="challenge-description"]');
@@ -77,7 +69,7 @@ async function fetchChallengeDetails(day: number) {
     if (textContent.includes("Medio")) difficulty = "Medio";
     else if (textContent.includes("Difícil")) difficulty = "Difícil";
 
-    return { title, emoji, difficulty, descriptions };
+    return { title, difficulty, descriptions };
   } catch (e) {
     console.error(`Failed to fetch details for day ${day}`, e);
     return null;
@@ -134,7 +126,6 @@ async function main() {
       currentChallenges.push({
         day,
         title: "",
-        emoji: "",
         difficulty: "Fácil",
         descriptions: [],
         solved: false,
