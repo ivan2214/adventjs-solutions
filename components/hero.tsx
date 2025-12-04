@@ -3,9 +3,9 @@ export function Hero() {
   const totalChallenges = 25;
 
   return (
-    <section className="py-12 md:py-20 text-center relative overflow-hidden">
+    <section className="relative overflow-hidden py-12 text-center md:py-20">
       {/* Decorative snowflakes */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
         {[...Array(15)].map((_, i) => (
           <div
             key={i.toString()}
@@ -22,8 +22,8 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-wider text-balance">
+      <div className="container relative z-10 mx-auto px-4">
+        <h1 className="mb-4 text-balance font-bold text-5xl tracking-wider md:text-7xl lg:text-8xl">
           RETOS DE
           <br />
           <span className="text-accent">CÓDIGO</span>
@@ -31,30 +31,30 @@ export function Hero() {
           NAVIDEÑOS
         </h1>
 
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+        <p className="mb-8 text-muted-foreground text-xl md:text-2xl">
           {solvedCount} de {totalChallenges} retos completados
         </p>
 
-        <div className="flex justify-center gap-4 mb-8">
-          <div className="flex items-center gap-2 bg-card/50 px-4 py-2 rounded-lg">
+        <div className="mb-8 flex justify-center gap-4">
+          <div className="flex items-center gap-2 rounded-lg bg-card/50 px-4 py-2">
             <span className="text-2xl">🎯</span>
             <span className="text-lg">JavaScript</span>
           </div>
-          <div className="flex items-center gap-2 bg-card/50 px-4 py-2 rounded-lg">
+          <div className="flex items-center gap-2 rounded-lg bg-card/50 px-4 py-2">
             <span className="text-2xl">📘</span>
             <span className="text-lg">TypeScript</span>
           </div>
         </div>
 
         {/* Progress bar */}
-        <div className="max-w-md mx-auto">
-          <div className="bg-secondary rounded-full h-4 overflow-hidden">
+        <div className="mx-auto max-w-md">
+          <div className="h-4 overflow-hidden rounded-full bg-secondary">
             <div
-              className="bg-gradient-to-r from-primary to-success h-full transition-all duration-500"
+              className="h-full bg-gradient-to-r from-primary to-success transition-all duration-500"
               style={{ width: `${(solvedCount / totalChallenges) * 100}%` }}
             />
           </div>
-          <p className="text-sm text-muted-foreground mt-2">
+          <p className="mt-2 text-muted-foreground text-sm">
             {Math.round((solvedCount / totalChallenges) * 100)}% completado
           </p>
         </div>
